@@ -1,0 +1,32 @@
+<% include partials/header.ejs %>
+
+<div class="container-fluid">
+
+	<% if (movie == 0) { -%>
+		<h1>No Result Found</h1>
+	<% } else { -%>
+		
+		<h1 >Search Results for <%= movie %></h1>
+		
+		<div class="row justify-content-center">
+			<% data.Search.forEach(function(movie){ %>
+				<div class="card-deck col-12 col-sm-6 col-lg-4 col-xl-3">
+					<div class="card text-center text-white bg-dark border-light mb-3" >
+						<img src="<%= movie.Poster %>" class="card-img-top">
+						<div class="card-body">
+							<h3 class="card-title"><%= movie.Title %></h3>
+							<h5 class="card-text">( <%= movie.Year %> )</h5>
+							<a href="/info/<%= movie.imdbID %>" class="btn btn-primary">More Info</a>
+						</div>
+					</div>
+				</div>
+			<% }) %>
+		</div>
+
+	<% } -%>
+
+	<a href="/" class="d-inline d-sm-none btn btn-info" id="special">Search Again</a>
+	<hr>
+</div>
+
+<% include partials/footer.ejs %>

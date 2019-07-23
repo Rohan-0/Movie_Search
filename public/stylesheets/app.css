@@ -1,0 +1,55 @@
+body {
+	background: url("../images/b4.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+html,body {
+	font-family: 'Lato';
+	color: white;
+}
+
+.container-fluid {
+	width: 80%;
+}
+
+#special {
+	margin: auto 33%;
+}
+
+h1 {
+	padding: 2rem 4rem;
+	font-size: 4rem;
+	font-weight: 700;
+	text-shadow: 3px 7px 6px rgba(0,0,0,0.9), 3px 11px 16px rgba(0,0,0,0.7), 3px 21px 26px rgba(0,0,0,0.4), 3px 31px 36px rgba(0,0,0,0.1);
+}
+
+p {
+	margin: 2rem auto;
+}
+
+.col-12 {
+	font-size: 1.5rem;
+}
+
+#ad {
+	margin: 2rem auto;
+}
+
+ul {
+	margin-top: 2rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+@media (max-width: 550px) {
+   h1 {
+       font-size: 2.5em; 
+       padding: 2rem 1rem;
+       text-shadow: 3px 7px 6px rgba(0,0,0,0.9), 3px 11px 16px rgba(0,0,0,0.7), 3px 21px 26px rgba(0,0,0,0.4), 3px 31px 36px rgba(0,0,0,0.1);
+   }
+}

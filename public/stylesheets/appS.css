@@ -1,0 +1,42 @@
+body {
+	background: url("../images/b4.png");
+	background-size: cover;
+	background-position: center;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: 'Lato';
+	color: white;
+}
+
+.content {
+	padding: 17% 30%;
+	text-shadow: 3px 7px 6px rgba(0,0,0,0.9), 3px 11px 16px rgba(0,0,0,0.7), 3px 21px 26px rgba(0,0,0,0.4), 3px 31px 36px rgba(0,0,0,0.1);
+}
+
+.btn {
+	box-shadow: 5px 5px 7px 6px rgba(0, 0, 0, 0.3);
+}
+
+.form-control {
+	margin-bottom: 1rem;
+	box-shadow: 5px 5px 7px 6px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+	font-size: 5rem;
+	font-weight: 700;
+}
+
+@media (max-width: 600px) {
+   h1 {
+       font-size: 4em; 
+   }
+
+   .content {
+		padding: 15% 25%;
+		text-shadow: 3px 7px 6px rgba(0,0,0,0.9), 3px 11px 16px rgba(0,0,0,0.7), 3px 21px 26px rgba(0,0,0,0.4), 3px 31px 36px rgba(0,0,0,0.1);
+	}
+}

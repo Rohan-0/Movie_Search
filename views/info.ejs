@@ -1,0 +1,81 @@
+<% include partials/header.ejs %>
+
+<div class="container-fluid">
+
+	<div class="row text-center">
+		<div class="col-12">
+			<h1><%= movie.Title %></h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 col-md-6 text-center">
+			<img src="<%= movie.Poster %>">
+		</div>
+		<div class="col-12 col-md-6 text-left">
+			<ul>
+				<li><strong>Released : </strong><%= movie.Year %></li>
+				<li><strong>Runtime : </strong><%= movie.Runtime %></li>
+				<li><strong>Type : </strong><%= movie.Type %></li>
+				<li><strong>Rated : </strong><%= movie.Rated %></li>
+				<li><strong>Genre : </strong><%= movie.Genre %></li>
+				<li><strong>Language : </strong><%= movie.Language %></li>
+				<% if (movie.Type == "movie") { -%>
+					<li><strong>BoxOffice : </strong><%= movie.BoxOffice %></li>
+					<li><strong>Production : </strong><%= movie.Production %></li>
+				<% } else if (movie.Type == "series"){ -%>
+					<li><strong>Total Seasons : </strong><%= movie.totalSeasons %></li>
+				<% } -%>
+				
+			</ul>
+		</div>
+	</div>	
+
+	<div class="row text-center">
+		<div class="col-12" id="ad">
+			<hr>
+			<p><strong>Director : </strong><em><%= movie.Director %></em></p>
+			<hr>
+			<p><strong>Writer : </strong><em><%= movie.Writer %></em></p>
+			<hr>
+			<p><strong>Actors : </strong><em><%= movie.Actors %></em></p>
+			<hr>
+			<p><strong>Plot : </strong><em><%= movie.Plot %></em></p>
+			<hr>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 col-sm-10 col-md-8 col-lg-6" id="ad">
+			<h2>Ratings</h2>
+
+			<table class="table table-dark">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Source</th>
+						<th scope="col">Value</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% var count = 1 %>
+					<% movie.Ratings.forEach(function (rating) { %>
+						<tr>
+							<th scope="row"><%= count++ %></th>
+							<td><%= rating.Source %></td>
+							<td><%= rating.Value %></td>
+						</tr>
+					<% }) %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<hr class="d-inline d-sm-none">
+
+	<a href="/" class="d-inline d-sm-none btn btn-info" id="special">Search Again</a>
+	<hr>
+
+</div>
+
+<% include partials/footer.ejs %>
